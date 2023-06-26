@@ -28,6 +28,11 @@ const VoiceButton = (props) => {
         return (
             <>
             <VoiceOneWrapper>
+            <div className="text">
+                    <h2>Speech to Text Converter</h2>
+                    <br/>
+                    <p>It is a tool that convert your voice to the text. you can also copy it to the clipcoard. So Try it now.</p>
+                    </div>
                 <div className="btncontainer">
                     <h1>Create New</h1>
                     <AiFillPlusCircle onClick={showPopup} className='voice1'></AiFillPlusCircle>

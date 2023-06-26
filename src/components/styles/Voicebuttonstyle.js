@@ -1,26 +1,44 @@
 import styled from "styled-components"
 
 export const VoiceOneWrapper = styled.div `
-            max-width: 1200px; 
+            max-width: 850px;
             margin-left:auto;
             margin-right: auto;
-            height: calc(100vh - 150px);
+            margin-top: 20px;
+            min-height: 450px;
             display: flex;
             justify-content: center;
+            flex-direction: column;
             align-items: center;
+            background-color: #ffffff;
+            border: 3px solid rgb(42, 201, 164);
+            border-radius: 20px;
+            gap: 50px;
+            padding: 50px;
+
+
+            .text h2 {
+            color: rgb(43 45 56);
+            text-align: center;
+            font-size: 48px;
+            letter-spacing: -0.2px;
+            font-family: "Merriweather", serif;
+            }
+
+            .text p {
+            max-width: 50rem;
+            text-align: center;
+            margin-top: 15px;  
+            font-size:20px;
+            }
 
             .btncontainer
             {
-                height: 300px;
-                width: 500px;
-                background-color: #ffffff;
-                border-radius: 20px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 flex-direction: column;
                 color: #171717;
-                border: 3px solid rgb(42, 201, 164);
                 gap: 20px;
             }
 
@@ -35,6 +53,22 @@ export const VoiceOneWrapper = styled.div `
             .voice1:hover
             {
                 transform: scale(1.1);
+            }
+            @media screen and (max-width: 865px){
+                margin: 20px;
+                padding: 10px;
+                .text h2
+                {
+                    font-size: 35px;
+                }
+                .voice1
+                {
+                height: 70px;
+                width: 70px; 
+                }
+                .text p {
+                margin-top: 10px;
+                }
             }
 
 `

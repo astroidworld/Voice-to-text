@@ -84,7 +84,9 @@ html, body {margin: 0; height: 100%; overflow: hidden}
   border-radius: 16px;
   overflow: scroll;
 }
-
+.main-content::-webkit-scrollbar {
+  display: none;
+}
 .main-content:focus {
   border: 0.3px solid rgb(43, 45, 56, 0.3);
   outline: none;
@@ -133,15 +135,24 @@ button:hover {
   justify-content: space-between;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 760px) {
+
+  .popup-container
+  {
+    align-items: start;
+    padding-top:10px ;
+  }
   .container {
-    margin-top: 0px;
+    width: 100%;
+    height: 100vh;
+    margin-top: 0px!important;
     border-radius: 0px;
   }
 
   .btn-style
   {
-    gap: 10px;
+    gap: 0px;
+    flex-direction: column;
   }
 
   .main-content {
