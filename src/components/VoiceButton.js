@@ -29,7 +29,7 @@ const VoiceButton = (props) => {
             <>
             <VoiceOneWrapper>
                 <div className="btncontainer">
-                    <h1>Create New </h1>
+                    <h1>Create New</h1>
                     <AiFillPlusCircle onClick={showPopup} className='voice1'></AiFillPlusCircle>
                 </div>
             </VoiceOneWrapper>
