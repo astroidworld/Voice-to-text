@@ -35,10 +35,6 @@ const Savingalert = (props) => {
             progress: undefined,
             theme: "light",
             });
-            // store to local Storage
-            let string = JSON.stringify(props.arr)
-            localStorage.setItem("arr", string)
-
         props.resetTranscript();        
         props.settext("");
         props.showalert(false);
