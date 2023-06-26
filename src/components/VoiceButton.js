@@ -40,6 +40,13 @@ const VoiceButton = (props) => {
         return (
             <>
             <VoiceTwoWrapper>
+            <div className="text">
+            <h2>Speech to Text Converter</h2>
+                    <br/>
+                    <p>It is a tool that convert your voice to the text. you can also copy it to the clipcoard. So Try it now.</p>
+                    </div>
+
+                    <div className="btn-section">
             <div className="create" onClick={showPopup} >
                 <h2>Create</h2>
                 <AiFillPlusCircle className='voice1'></AiFillPlusCircle>
@@ -49,7 +56,7 @@ const VoiceButton = (props) => {
                 <h2>Clear all</h2>
                 <AiOutlineClear onClick={showPopup2} className='clear'></AiOutlineClear>
                 </div>
-                
+                </div>
             </VoiceTwoWrapper>
             </>
         )

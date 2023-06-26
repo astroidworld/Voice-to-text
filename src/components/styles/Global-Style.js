@@ -12,10 +12,18 @@ ${'' /* imported font  */}
   font-family: "Work Sans", sans-serif;
 }
 
+
+
 html {
   color: rgb(96 101 123);
 }
 body{
   background-color: rgb(206, 255, 244);
 }
+html, body {   
+  overflow: ${(props) => {
+    return props.popup === true?'hidden':'none'
+  }
+  };
+  }
 `

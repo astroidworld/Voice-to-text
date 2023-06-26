@@ -1,6 +1,8 @@
 import styled from "styled-components"
 
 export const Wrapper = styled.section `
+
+html, body {margin: 0; height: 100%; overflow: hidden}
 .blurbackground{
   background-color: rgba(0, 0, 0, 0.566);    
   width: 100vw;
@@ -67,25 +69,12 @@ export const Wrapper = styled.section `
   color: rgb(180, 0, 0);
 }
 
-h2 {
-  color: rgb(43 45 56);
-  text-align: center;
-  font-size: 48px;
-  letter-spacing: -0.2px;
-  font-family: "Merriweather", serif;
-}
 
-p {
-  max-width: 50rem;
-  text-align: center;
-  margin-top: 24px;
-  margin-bottom: 50px;
-}
 
 .main-content {
   max-width: 50rem;
   width: 100%;
-  min-height: 400px;  
+  height: 400px;  
   padding: 18px 18px 120px 18px;
   position: relative;
   /* resize: none; */
@@ -93,6 +82,7 @@ p {
   background: rgb(255 255 255);
   border: 0.5px solid rgb(231 233 245);
   border-radius: 16px;
+  overflow: scroll;
 }
 
 .main-content:focus {
@@ -100,7 +90,6 @@ p {
   outline: none;
 }
 
-p,
 .main-content {
   font-size: 18px;
   letter-spacing: 1px;
@@ -110,9 +99,11 @@ p,
 
 .btn-style {
   min-height: 10px;
+  max-width: 800px;
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+  /* background-color: green; */
 }
 
 .btn-form {
@@ -125,9 +116,8 @@ p,
   font-size: 18px;
   letter-spacing: 1px;
   margin: auto;
-  display: flex;
-  position: relative;
-  margin-top: -80px;
+  margin-top: 20px;
+  display: flex;  
   cursor: pointer;
 }
 
@@ -145,24 +135,20 @@ button:hover {
 
 @media screen and (max-width: 768px) {
   .container {
-    margin-top: 20px;
+    margin-top: 0px;
+    border-radius: 0px;
   }
 
-  h2 {
-    font-size: 28px;
-  }
-
-  p {
-    font-size: 16px;
-    word-spacing: normal;
-    margin-bottom: 40px;
-    margin-top: 15px;
+  .btn-style
+  {
+    gap: 10px;
   }
 
   .main-content {
     /*border:1px solid*/
     font-size: 16px;
     word-spacing: normal;
+    height: 350px; 
   }
 
   button {

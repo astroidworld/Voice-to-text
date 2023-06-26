@@ -1,5 +1,4 @@
 import Mainbody from "./components/Mainbody";
-import { GlobalStyle } from "./components/styles/Global-Style";
 import { ToastContainer} from 'react-toastify';
 
 
@@ -22,7 +21,7 @@ const App = () => {
         />
 
         
-        <GlobalStyle/>
+        
         <Mainbody/>
         </>
     );

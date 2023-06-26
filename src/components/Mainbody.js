@@ -4,6 +4,7 @@ import HeaderBar from './HeaderBar';
 import {useState} from "react";
 import VoiceButton from './VoiceButton';
 import SavedCard from './SavedCard';
+import { GlobalStyle } from "./styles/Global-Style";
 
 
 const getLocalItems = () => {
@@ -30,7 +31,7 @@ const Mainbody = () => {
 
   return (
     <>
-
+        <GlobalStyle popup={popup}/>
         <HeaderBar></HeaderBar>
 
         

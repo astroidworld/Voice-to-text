@@ -20,6 +20,10 @@ const Popupvoice = (props) => {
         successDuration:1000
     });
 
+    const copynow = () => {        
+        setCopied();
+    }
+
     const startListening = () => SpeechRecognition.startListening({ continuous: true, language: 'en-IN' });
     const {
         transcript,
@@ -30,8 +34,9 @@ const Popupvoice = (props) => {
       } = useSpeechRecognition();
 
       useEffect(() => {
+        setTextToCopy(transcript);
         settext(finalTranscript);        
-      }, [interimTranscript, finalTranscript]);
+      }, [transcript, interimTranscript, finalTranscript]);
 
     
     if (!browserSupportsSpeechRecognition) {
@@ -66,17 +71,15 @@ const Popupvoice = (props) => {
         
                     <AiFillCloseCircle onClick={changeStateClose} className='close-button'/>
                     
-                    <h2>Speech to Text Converter</h2>
-                    <br/>
-                    <p>It is a tool that convert your voice to the text. you can also copy it to the clipcoard. So Try it now.</p>
+
         
-                    <div className="main-content" onClick={() =>  setTextToCopy(transcript)} >
+                    <div className="main-content"  >
                         {transcript}
                     </div>
         
                     <div className="btn-style">
         
-                        <button onClick={setCopied} className='btn-form'>
+                        <button onClick={copynow} className='btn-form'>
                             {isCopied ? 'Copied!' : 'Copy to clipboard'}
                         </button>
                         <button onClick={startListening} className='btn-form'>Start Listening</button>

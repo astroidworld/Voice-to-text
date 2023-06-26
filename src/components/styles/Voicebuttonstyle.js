@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const VoiceOneWrapper = styled.div `
-            width: 1200px; 
+            max-width: 1200px; 
             margin-left:auto;
             margin-right: auto;
             height: calc(100vh - 150px);
@@ -40,12 +40,48 @@ export const VoiceOneWrapper = styled.div `
 `
 
 export const VoiceTwoWrapper = styled.div `
-            width: 100%;           
+            max-width: 850px;           
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 30px;
+            padding: 30px 50px 30px 50px;
             gap: 50px;
+            flex-wrap: wrap;
+            flex-direction: column;
+            background-color: #ffffff;
+            border: 3px solid rgb(42, 201, 164);
+            border-radius: 20px;
+            margin: 20px auto 0 auto;
+
+            .text h2 {
+            color: rgb(43 45 56);
+            text-align: center;
+            font-size: 48px;
+            letter-spacing: -0.2px;
+            font-family: "Merriweather", serif;
+            }
+
+            .text p {
+            max-width: 50rem;
+            text-align: center;
+            margin-top: 15px;  
+            font-size:20px;
+            }
+
+            .text
+            {
+                max-width: 850px;                
+            }
+            .btn-section
+            {
+            max-width: 100%;           
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* padding: 30px; */
+            gap: 50px;
+            flex-wrap: wrap;
+            }
             .create{
                 height: 70px;
                 width: 150px;
@@ -69,5 +105,13 @@ export const VoiceTwoWrapper = styled.div `
                 height: 25px;
                 width: 25px;
                 color:rgb(42, 201, 164); 
+            }
+
+            @media screen and (max-width: 420px){
+                gap: 20px;
+                h2
+                {
+                    font-size: 20px;
+                }
             }
 `
