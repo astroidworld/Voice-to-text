@@ -1,8 +1,10 @@
 import styled from "styled-components"
 
 export const VoiceOneWrapper = styled.div `
-            width: 100vw;           
-            height: calc(100vh - 70px);
+            width: 1200px; 
+            margin-left:auto;
+            margin-right: auto;
+            height: calc(100vh - 150px);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -38,7 +40,7 @@ export const VoiceOneWrapper = styled.div `
 `
 
 export const VoiceTwoWrapper = styled.div `
-            width: 100vw;           
+            width: 100%;           
             display: flex;
             justify-content: center;
             align-items: center;

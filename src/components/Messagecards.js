@@ -1,10 +1,14 @@
 import React from 'react'
+import { MessageWrapper } from './styles/MessagecardStyle'
+
 
 const Messagecards = (props) => {
   return (
-    <div>
+    <>
+      <MessageWrapper>
         <h1>{props.ele}</h1>
-    </div>
+      </MessageWrapper>
+    </>
   )
 }
 
