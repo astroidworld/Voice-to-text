@@ -8,12 +8,12 @@ import VoiceButton from './VoiceButton';
 
 const Mainbody = () => {
 
+  // JSON.parse(localStorage.getItem("arr"))
 
-
-  const [arr, setarr] = useState(JSON.parse(localStorage.getItem("arr")));
+  const [arr, setarr] = useState([]);
   
-  let string = JSON.stringify(arr)
-  localStorage.setItem("arr", string)
+  // let string = JSON.stringify(arr)
+  // localStorage.setItem("arr", string)
 
 
     
@@ -36,7 +36,7 @@ const Mainbody = () => {
         
 
         {         
-          JSON.parse(localStorage.getItem("arr")).map((ele,i)=>{
+          arr.map((ele,i)=>{
             return (<Messagecards ele={ele}/>)
           })
         }
