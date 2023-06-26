@@ -1,27 +1,70 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter&family=Lato&family=Libre+Baskerville&family=Merriweather:wght@700&family=Work+Sans&display=swap");
+import styled from "styled-components"
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Work Sans", sans-serif;
+export const Wrapper = styled.section `
+.blurbackground{
+  background-color: rgba(0, 0, 0, 0.566);    
+  width: 100vw;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
-
-html {
-  color: rgb(96 101 123);
-}
-
-body {
+.popup-container
+{
+  width: 100vw;
+  min-height: 100vh;  
+  position: absolute;
+  top: 0;
+  right: 0;
   display: flex;
-  justify-content: center;
   align-items: center;
-  align-self: center;
-  background: rgb(255 255 255);
+  justify-content: center;
+}
+.container {
+  position: relative;
+  padding: 40px;
+  max-width: 850px; 
+  min-height: 100px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: azure;
+  align-items: center;
+  border-radius: 10px;
+  animation: popupanimation 0.2s linear;
 }
 
-.container {
-  padding: 30px;
-  margin-top: 80px;
+@keyframes popupanimation {
+  0%
+  {
+    transform: scale(0.8);
+  }
+  25%
+  {
+    transform: scale(0.99);
+  }
+  75%
+  {
+    transform: scale(0.96);
+  }
+  100%
+  {
+    transform: scale(1); 
+  }
+}
+
+.close-button{
+  position: absolute;
+  font-size: 30px;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: rgb(49, 49, 49);
+}
+
+.close-button:hover
+{
+  color: rgb(180, 0, 0);
 }
 
 h2 {
@@ -42,11 +85,10 @@ p {
 .main-content {
   max-width: 50rem;
   width: 100%;
-  min-height: 400px;
-  height: auto;
+  min-height: 400px;  
   padding: 18px 18px 120px 18px;
   position: relative;
-  resize: none;
+  /* resize: none; */
   box-shadow: 0 12px 48px 0px rgb(109 117 141 / 20%);
   background: rgb(255 255 255);
   border: 0.5px solid rgb(231 233 245);
@@ -67,10 +109,13 @@ p,
 }
 
 .btn-style {
+  min-height: 10px;
   display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-button {
+.btn-form {
   /* position: absolute; */
   background: rgb(17 166 131);
   color: rgb(255 255 255);
@@ -134,3 +179,6 @@ button:hover {
     margin-bottom: 0;
   }
 }
+
+
+`
