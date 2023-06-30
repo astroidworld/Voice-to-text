@@ -86,6 +86,10 @@ export const SavingalertWrapper = styled.div`
             border-radius:10px;
             gap: 120px;
         }
+        .Savingalert-container h1
+        {
+            font-size: 20px;
+        }
 
         .Savingalert-container button
             {
