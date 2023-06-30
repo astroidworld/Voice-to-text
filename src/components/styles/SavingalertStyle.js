@@ -14,7 +14,7 @@ export const SavingalertWrapper = styled.div`
 
         .Savingalert-container
         {
-            height: 200px;
+            min-height: 200px;
             width: 500px;
             background-color: white;
             box-shadow: 3px 3px  10px #505050;
@@ -38,6 +38,8 @@ export const SavingalertWrapper = styled.div`
             width: 100%;
             display: flex;
             justify-content: space-evenly;
+            flex-wrap:wrap ;
+            gap: 10px;
         }
         .Savingalert-container button
         {
@@ -64,6 +66,30 @@ export const SavingalertWrapper = styled.div`
             100%
             {
                 top:0px;
+            }
+        }
+
+        @media screen and (max-width:770px) {
+            align-items: center;
+            justify-content: center;
+            background-color: #1e1e1ed2;
+
+            .Savingalert-container
+        {
+            min-height: 200px;
+            width: 500px;
+            margin-left: 20px;
+            margin-right:20px;
+            padding-top: 40px;
+            padding-bottom: 20px;
+            position: relative;              
+            border-radius:10px;
+            gap: 120px;
+        }
+
+        .Savingalert-container button
+            {
+                width: fit-content;                
             }
         }
 `
