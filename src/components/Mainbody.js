@@ -31,7 +31,7 @@ const Mainbody = () => {
 
   return (
     <>
-        <GlobalStyle popup={popup}/>
+        <GlobalStyle popup={popup}/>       
         <HeaderBar></HeaderBar>
 
         
